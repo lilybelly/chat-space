@@ -49,7 +49,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|index: true, null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users, through: members

@@ -1,0 +1,7 @@
+.bottom-contents
+  %form{id: "new-message", method: "post"}
+    .message--inform-box
+      %input{name: "text", size: "80", value: "type a message", placeholder: "type a message", type: "text", class: "text-holder"}
+        %label.chat-file{ for: "message_image"}
+          %i.fa.fa-image.icon
+      %input{ type: "submit", value: "Send", class: "submit"}

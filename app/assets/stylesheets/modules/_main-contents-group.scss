@@ -1,0 +1,121 @@
+.main-contents {
+  width: $mainContetWidth;
+  float: left;
+  height: 100%;
+  &__header {
+    padding: 0 40px;
+    height: $topContentsHeight;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    width: $mainContetWidth;
+
+    &__group-name{
+      color: #333;
+      font-size: 18px;
+      margin: 30px 0 10px;
+      line-height: 20px;
+    }
+    &__group-member {
+      font-size: 10px;
+      color: #999;
+      line-height: 12px;
+      padding-bottom: 10px;
+    }
+    &__edit-btn{
+      position: absolute;
+      top: 45px;
+      right: 18px;
+      height: 40px;
+      border: 1px solid #38AEF0;
+      padding: 12.5px 20px;
+      font-size: 11px;
+      box-sizing: border-box;
+      color: #38AEF0;
+    }
+  }
+
+  .main-contents__message {
+      padding-left: 40px;
+      padding-top: 26px;
+      height: 100vh;
+      bottom: 80px;
+
+    .message-box::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .message-box__name {
+        float: left;
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 20px;
+        padding-bottom: 5px;
+      }
+      .message-box__date {
+        float: left;
+        font-size: 10px;
+        color: #999999;
+        padding-left: 8px;
+        padding-top: 20px;
+      }
+      .message-box__text {
+        font-size: 12px;
+        padding-bottom: 10px;
+      }
+  }
+
+  .bottom-contents {
+    position: fixed;
+    display: block;
+    box-sizing: border-box;
+    background-color: #b8c3c7;
+    height: 80px;
+    bottom: 0;
+    width: $mainContetWidth;
+    #new-message {
+      margin: 0 10px 0 35px;
+      position: relative;
+      .message--inform-box{
+        position: relative;
+
+        .text-holder {
+          height: 40px;
+          width: calc( 100% - 130px );
+          padding: 15px 10px;
+          margin: 20px 0;
+          border: none;
+          box-sizing: border-box;
+          color: #434a54;
+          font-size: 14px;
+          line-height: 14px;
+          background-color: white;
+          border: none;
+        }
+        .chat-file {
+          background-color: white;
+          height: 30px;
+          width: 40px;
+          margin: 20px 110px 20px 0;
+          padding-top: 10px;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        .submit {
+          background-color: #38AEF0;
+          position: absolute;
+          float: right;
+          color: white;
+          font-size: 14px;
+          width: 80px;
+          height: 40px;
+          border: none;
+          margin: 20px 0 20px 30px;
+
+        }
+      }
+    }
+  }
+}
+

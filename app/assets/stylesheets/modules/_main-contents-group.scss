@@ -2,26 +2,26 @@
   width: $mainContetWidth;
   float: left;
   height: 100%;
-  .main-contents__header {
+  &__header {
     padding: 0 40px;
     height: $topContentsHeight;
     border: 1px solid #eee;
     box-sizing: border-box;
     width: $mainContetWidth;
 
-    .main-contents__header__group-name{
+    &__group-name{
       color: #333;
       font-size: 18px;
       margin: 30px 0 10px;
       line-height: 20px;
     }
-    .main-contents__header__group-member {
+    &__group-member {
       font-size: 10px;
       color: #999;
       line-height: 12px;
       padding-bottom: 10px;
     }
-    .main-contents__header__edit-btn{
+    &__edit-btn{
       position: absolute;
       top: 45px;
       right: 18px;

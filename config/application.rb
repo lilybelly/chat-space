@@ -17,5 +17,6 @@ module ChatSpace
       g.helper false
       g.test_framework :rspec, view_specs: false, helper_specs: false, fixture: true
     end
+    config.i18n.default_locale = :ja
   end
 end

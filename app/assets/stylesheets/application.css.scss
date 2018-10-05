@@ -1,9 +1,13 @@
 @import './reset';
 @import './config/variable';
+@import './config/colors';
 @import './mixin/clearfix';
 @import 'font-awesome';
 @import './modules/information';
 @import './modules/var-side';
+@import "./modules/user";
+@import "./modules/group";
+@import './modules/flash';
 @import './modules/main-contents-group';
 
 

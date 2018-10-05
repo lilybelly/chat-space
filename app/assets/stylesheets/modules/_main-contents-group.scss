@@ -2,12 +2,16 @@
   width: $mainContetWidth;
   float: left;
   height: 100%;
+  margin-left: 240px;
+  margin-top: 24px;
   &__header {
     padding: 0 40px;
     height: $topContentsHeight;
     border: 1px solid #eee;
     box-sizing: border-box;
     width: $mainContetWidth;
+    position: fixed;
+
 
     &__group-name{
       color: #333;
@@ -23,7 +27,7 @@
     }
     &__edit-btn{
       position: absolute;
-      top: 45px;
+      top: 25px;
       right: 18px;
       height: 40px;
       border: 1px solid #38AEF0;
@@ -39,6 +43,7 @@
       padding-top: 26px;
       height: 100vh;
       bottom: 80px;
+      margin-top: 114px;
 
     .message-box::after{
         content: '';

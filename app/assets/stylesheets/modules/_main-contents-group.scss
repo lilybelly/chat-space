@@ -2,7 +2,7 @@
   width: $mainContetWidth;
   float: left;
   height: 100%;
-  margin-left: 240px;
+  margin-left: 300px;
   margin-top: 24px;
   &__header {
     padding: 0 40px;
@@ -11,28 +11,32 @@
     box-sizing: border-box;
     width: $mainContetWidth;
     position: fixed;
+    z-index: 0;
+    background-color: white;
 
 
     &__group-name{
       color: #333;
-      font-size: 18px;
+      font-size: 20px;
       margin: 30px 0 10px;
       line-height: 20px;
+      font-weight: bold;
     }
     &__group-member {
-      font-size: 10px;
+      font-size: 12px;
       color: #999;
       line-height: 12px;
       padding-bottom: 10px;
     }
     &__edit-btn{
       position: absolute;
-      top: 25px;
-      right: 18px;
-      height: 40px;
-      border: 1px solid #38AEF0;
+      top: 23px;
+      right: 40px;
+      height: 50px;
+      border: 3px solid #38AEF0;
       padding: 12.5px 20px;
-      font-size: 11px;
+      font-size: 15px;
+      font-weight: bold;
       box-sizing: border-box;
       color: #38AEF0;
     }
@@ -44,6 +48,7 @@
       height: 100vh;
       bottom: 80px;
       margin-top: 114px;
+      z-index: 2;
 
     .message-box::after{
         content: '';
@@ -52,20 +57,20 @@
       }
       .message-box__name {
         float: left;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         padding-top: 20px;
         padding-bottom: 5px;
       }
       .message-box__date {
         float: left;
-        font-size: 10px;
+        font-size: 12px;
         color: #999999;
         padding-left: 8px;
         padding-top: 20px;
       }
       .message-box__text {
-        font-size: 12px;
+        font-size: 14px;
         padding-bottom: 10px;
       }
   }
@@ -92,8 +97,8 @@
           border: none;
           box-sizing: border-box;
           color: #434a54;
-          font-size: 14px;
-          line-height: 14px;
+          font-size: 16px;
+          line-height: 16px;
           background-color: white;
           border: none;
         }
@@ -112,7 +117,7 @@
           position: absolute;
           float: right;
           color: white;
-          font-size: 14px;
+          font-size: 16px;
           width: 80px;
           height: 40px;
           border: none;

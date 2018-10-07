@@ -4,7 +4,7 @@
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'text-holder', placeholder: 'type a message'
         .chat-file
-          / = f.label :image, class: 'message_image'
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
+          = f.label :image, class: 'massage_image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'submit'

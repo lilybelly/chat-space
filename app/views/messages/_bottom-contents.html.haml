@@ -1,7 +1,10 @@
 .bottom-contents
-  %form{id: "new-message", method: "post"}
+  %form{ class: "new-message", method: "post"}
     .message--inform-box
-      %input{name: "text", size: "80", value: "type a message", placeholder: "type a message", type: "text", class: "text-holder"}
-        %label.chat-file{ for: "message_image"}
-          %i.fa.fa-image.icon
-      %input{ type: "submit", value: "Send", class: "submit"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'text-holder', placeholder: 'type a message'
+        .chat-file
+          / = f.label :image, class: 'message_image'
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit'

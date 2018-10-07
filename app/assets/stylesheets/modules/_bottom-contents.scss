@@ -6,13 +6,11 @@
   height: 80px;
   bottom: 0;
   width: $mainContetWidth;
-  margin-left: 300px;
-  #new-message {
+  .new-message {
     margin: 0 10px 0 35px;
     position: relative;
     .message--inform-box{
       position: relative;
-
       .text-holder {
         height: 40px;
         width: calc( 100% - 130px );
@@ -26,16 +24,18 @@
         background-color: white;
         border: none;
       }
+
       .chat-file {
-        background-color: white;
-        height: 30px;
-        width: 40px;
-        margin: 20px 110px 20px 0;
-        padding-top: 10px;
-        position: absolute;
-        top: 0;
-        right: 0;
+          background-color: white;
+          height: 30px;
+          width: 40px;
+          margin: 20px 110px 20px 0;
+          padding-top: 10px;
+          position: absolute;
+          top: 0;
+          right: 0;
       }
+
       .submit {
         background-color: #38AEF0;
         position: absolute;
@@ -46,7 +46,7 @@
         height: 40px;
         border: none;
         margin: 20px 0 20px 30px;
-
+        z-index: 6;
       }
     }
   }

@@ -1,0 +1,19 @@
+
+= render partial: "var-side"
+
+.main-contents
+  .main-contents__header
+    .main-contents__header__group-name
+      group1
+    .main-contents__header__group-member
+      MEMBER
+      %i.member-name
+        yoko
+    .main-contents__header__edit-btn
+      %a.chat-main__header--group-edit-btn
+      edit
+  .main-contents__message
+    = render partial: 'message', collection: @messages
+
+  = render partial: "bottom-contents"
+

@@ -3,7 +3,6 @@
   float: left;
   height: 100%;
   margin-left: 300px;
-  margin-top: 24px;
   &__header {
     padding: 0 40px;
     height: $topContentsHeight;
@@ -18,7 +17,7 @@
     &__group-name{
       color: #333;
       font-size: 20px;
-      margin: 30px 0 10px;
+      margin: 35px 0 10px;
       line-height: 20px;
       font-weight: bold;
     }
@@ -49,80 +48,29 @@
       bottom: 80px;
       margin-top: 114px;
       z-index: 2;
+    .messages-contents{
 
-    .message-box::after{
-        content: '';
-        display: block;
-        clear: both;
-      }
-      .message-box__name {
-        float: left;
-        font-size: 16px;
-        font-weight: bold;
-        padding-top: 20px;
-        padding-bottom: 5px;
-      }
-      .message-box__date {
-        float: left;
-        font-size: 12px;
-        color: #999999;
-        padding-left: 8px;
-        padding-top: 20px;
-      }
-      .message-box__text {
-        font-size: 14px;
-        padding-bottom: 10px;
-      }
-  }
-
-  .bottom-contents {
-    position: fixed;
-    display: block;
-    box-sizing: border-box;
-    background-color: #b8c3c7;
-    height: 80px;
-    bottom: 0;
-    width: $mainContetWidth;
-    #new-message {
-      margin: 0 10px 0 35px;
-      position: relative;
-      .message--inform-box{
-        position: relative;
-
-        .text-holder {
-          height: 40px;
-          width: calc( 100% - 130px );
-          padding: 15px 10px;
-          margin: 20px 0;
-          border: none;
-          box-sizing: border-box;
-          color: #434a54;
+      .message-box::after{
+          content: '';
+          display: block;
+          clear: both;
+        .message-box__name {
+          float: left;
           font-size: 16px;
-          line-height: 16px;
-          background-color: white;
-          border: none;
+          font-weight: bold;
+          padding-top: 20px;
+          padding-bottom: 5px;
         }
-        .chat-file {
-          background-color: white;
-          height: 30px;
-          width: 40px;
-          margin: 20px 110px 20px 0;
-          padding-top: 10px;
-          position: absolute;
-          top: 0;
-          right: 0;
+        .message-box__date {
+          float: left;
+          font-size: 12px;
+          color: #999999;
+          padding-left: 8px;
+          padding-top: 20px;
         }
-        .submit {
-          background-color: #38AEF0;
-          position: absolute;
-          float: right;
-          color: white;
-          font-size: 16px;
-          width: 80px;
-          height: 40px;
-          border: none;
-          margin: 20px 0 20px 30px;
-
+        .message-box__text {
+          font-size: 14px;
+          padding-bottom: 10px;
         }
       }
     }

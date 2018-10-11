@@ -6,25 +6,22 @@
   height: 80px;
   bottom: 0;
   width: $mainContetWidth;
-  .new-message {
+  .message--inform-box{
     margin: 0 10px 0 35px;
     position: relative;
-    .message--inform-box{
-      position: relative;
-      .text-holder {
-        height: 40px;
-        width: calc( 100% - 130px );
-        padding: 15px 10px;
-        margin: 20px 0;
-        border: none;
-        box-sizing: border-box;
-        color: #434a54;
-        font-size: 16px;
-        line-height: 16px;
-        background-color: white;
-        border: none;
-      }
-
+    .text-holder {
+      height: 40px;
+      width: calc( 100% - 130px );
+      padding: 15px 10px;
+      margin: 20px 0;
+      border: none;
+      box-sizing: border-box;
+      color: #434a54;
+      font-size: 16px;
+      line-height: 16px;
+      background-color: white;
+      border: none;
+    }
       .chat-file {
           background-color: white;
           height: 30px;
@@ -53,4 +50,3 @@
       }
     }
   }
-}

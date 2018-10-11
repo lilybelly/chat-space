@@ -10,7 +10,7 @@
     box-sizing: border-box;
     width: $mainContetWidth;
     position: fixed;
-    z-index: 0;
+    z-index: 4;
     background-color: white;
 
 
@@ -42,12 +42,10 @@
   }
 
   .main-contents__message {
-      padding-left: 40px;
-      padding-top: 26px;
-      height: 100vh;
-      bottom: 80px;
-      margin-top: 114px;
-      z-index: 2;
+      padding: 26px 0 30px 40px;
+      height: calc(100vh - 180px);
+      margin:100px 0 80px;
+      overflow-y: scroll;
     .message-box{
       // content: '';
       // display: block;

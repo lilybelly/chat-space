@@ -2,17 +2,17 @@
   .var-side__user
     .var-side__user__content
       .var-side__user__content-name
-        yoko
+        = current_user.name
         %a.var-side__user__content-name__new-group{href: "/groups/new"}
           %i.fa.fa-edit.icon
         %a.var-side__user__content-name__user-setting{href: "/users/edit"}
           %i.fa.fa-cog.icon
   .var-side__groups
     %ul
-    - current_user.groups.each do |group|
-      %li.group
-      = link_to group_messages_path(group) do
-        .group-name
-          = group.name
-        .group-message
-          = group.show_last_message
+      - current_user.groups.each do |group|
+        %li.group
+          = link_to group_messages_path(group) do
+            .group-name
+              = group.name
+            .group-message
+              = group.show_last_message

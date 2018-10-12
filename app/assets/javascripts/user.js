@@ -24,8 +24,8 @@ $(function() {
     $("#chat-group-users").append(html)
   }
 
-  $("#user-search-field.chat-group-form__input").on("keyup", function() {
-    var input = $("#user-search-field.chat-group-form__input").val();
+  $(".user-search-field").on("keyup", function() {
+    var input = $(".user-search-field.chat-group-form__input").val();
     $.ajax({
       type: 'GET',
       url: ' /users',
@@ -38,7 +38,7 @@ $(function() {
         users.forEach(function(users){
            appendUser(users);
         });
-        }else {
+        } else {
         appendNoUser("一致するユーザーはいません");
       }
     })

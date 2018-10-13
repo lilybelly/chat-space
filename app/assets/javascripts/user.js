@@ -10,8 +10,8 @@ $(function() {
     $("#user-search-result").append(html);
   }
 
-  function appendNoUser(error) {
-    var html = `<div>${ error }</div>`
+  function appendNoUser(no_user_message) {
+    var html = `<div>${no_user_message}</div>`
     $("#user-search-result").append(html);
   }
 

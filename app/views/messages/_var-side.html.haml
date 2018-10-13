@@ -9,10 +9,10 @@
           %i.fa.fa-cog.icon
   .var-side__groups
     %ul
-      - current_user.groups.each do |group|
-        %li.group
-          = link_to group_messages_path(group) do
-            .group-name
-              = group.name
-            .group-message
-              = group.show_last_message
+    - current_user.groups.each do |group|
+      %li.group
+      = link_to group_messages_path(group) do
+        .group-name
+          = group.name
+        .group-message
+          = group.show_last_message

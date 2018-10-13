@@ -4,11 +4,12 @@
 .main-contents
   .main-contents__header
     .main-contents__header__group-name
-      group1
+      =@group.name
     .main-contents__header__group-member
-      MEMBER
+      Member
       %i.member-name
-        yoko
+      -@group.users.each do |user|
+        =user.name + " "
     .main-contents__header__edit-btn
       %a.chat-main__header--group-edit-btn
       edit

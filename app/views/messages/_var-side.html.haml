@@ -2,7 +2,7 @@
   .var-side__user
     .var-side__user__content
       .var-side__user__content-name
-        yoko
+        = current_user.name
         %a.var-side__user__content-name__new-group{href: "/groups/new"}
           %i.fa.fa-edit.icon
         %a.var-side__user__content-name__user-setting{href: "/users/edit"}

@@ -56,3 +56,4 @@ $(function() {
     $(this).parent().remove();
   });
 });
+

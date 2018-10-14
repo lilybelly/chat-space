@@ -1,12 +1,17 @@
 $(function(){
 
   function buildHTML(message){
+    if (message.content) {
+      var messageContent = message.content
+    } else {
+      var messageContent = ""
+    }
     if (message.image){
       var messageImg =  `<img src = "${message.image}", class = "lower-message__image"> </img>`
     }else{
       var messageImg = ""
     }
-    var html = `<div class= "message-box clearfix" >
+    var html = `<div class= "message-box clearfix" , id="${message.id}">
                   <div class="message-box__name">
                     ${message.name}
                   </div>
@@ -22,7 +27,37 @@ $(function(){
                 </div>`
     return html;
   }
+  function AutomaticUpdating(){
+    var presentMessageId = $('.message-box:last').attr('id')
+    var presentHTML = window.location.href
+    if (presentHTML.match(/\/groups\/\d+\/messages/)){
+      $.ajax ({
+        url: presentHTML,
+        type: 'GET',
+        data: {id: presentMessageId},
+        dataType: 'json',
+        processData: false,
+        contentType: false
+      })
+      .done(function(json){
+        var insertHTML = "";
+        json.forEach(function(message){
+          if (message.id > presentMessageId){
+            insertHTML += buildHTML(message);
+            $('.main-contents__message').append(insertHTML);
+            $('.main-contents__message').animate({scrollTop: $('.main-contents__message')[0].scrollHeight});
+          }
+        });
+      })
 
+      .fail(function(data){
+        alert('error')
+      });
+
+    } else {
+      clearInterval(interval)
+    }
+  }
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -46,4 +81,9 @@ $(function(){
       alert('メッセージを入力してください');
     })
   })
-})
+
+  var interval = setInterval(
+    AutomaticUpdating
+  , 5000);
+});
+

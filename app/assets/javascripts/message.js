@@ -27,35 +27,9 @@ $(function(){
                 </div>`
     return html;
   }
-
-  $('#new_message').on('submit', function(e){
-    e.preventDefault();
-    var formData = new FormData(this);
-    var url = $(this).attr('action');
-    $.ajax({
-      url: url,
-      type: "POST",
-      data: formData,
-      dataType: 'json',
-      processData: false,
-      contentType: false
-    })
-    .done(function(data){
-      var html = buildHTML(data);
-      $('.main-contents__message').append(html);
-      $('.main-contents__message').animate({scrollTop: $('.main-contents__message')[0].scrollHeight});
-      $('.submit').prop('disabled', false);
-    })
-    .fail(function(){
-      alert('メッセージを入力してください');
-    })
-  })
-
-  var interval = setInterval(function(){
-
+  function AutomaticUpdating(){
     var presentMessageId = $('.message-box:last').attr('id')
     var presentHTML = window.location.href
-
     if (presentHTML.match(/\/groups\/\d+\/messages/)){
       $.ajax ({
         url: presentHTML,
@@ -83,6 +57,33 @@ $(function(){
     } else {
       clearInterval(interval)
     }
-  }, 5000);
+  }
+
+  $('#new_message').on('submit', function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+    var url = $(this).attr('action');
+    $.ajax({
+      url: url,
+      type: "POST",
+      data: formData,
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.main-contents__message').append(html);
+      $('.main-contents__message').animate({scrollTop: $('.main-contents__message')[0].scrollHeight});
+      $('.submit').prop('disabled', false);
+    })
+    .fail(function(){
+      alert('メッセージを入力してください');
+    })
+  })
+
+  var interval = setInterval(
+    AutomaticUpdating
+  , 5000);
 });
 

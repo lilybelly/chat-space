@@ -62,3 +62,6 @@ gem "font-awesome-rails"
 gem 'haml-rails'
 gem 'erb2haml'
 
+group :production do
+  gem 'unicorn'
+end

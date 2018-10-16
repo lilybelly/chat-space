@@ -76,6 +76,7 @@ $(function(){
       $('.main-contents__message').append(html);
       $('.main-contents__message').animate({scrollTop: $('.main-contents__message')[0].scrollHeight});
       $('.submit').prop('disabled', false);
+      $('#new_message')[0].reset();
     })
     .fail(function(){
       alert('メッセージを入力してください');

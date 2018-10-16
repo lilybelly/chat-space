@@ -47,9 +47,9 @@
       margin:100px 0 80px;
       overflow-y: scroll;
     .message-box{
-      // content: '';
-      // display: block;
-      // clear: both;
+      content: '';
+      display: block;
+      clear: both;
       @include clearfix;
       .message-box__name {
         float: left;
@@ -70,8 +70,9 @@
       .lower-message__content {
         font-size: 14px;
         padding-bottom: 10px;
-      }
-      .lower-message__image {
+        .lower-message__image {
+          width: 200px;
+        }
       }
     }
   }

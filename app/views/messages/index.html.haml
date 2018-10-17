@@ -12,7 +12,7 @@
         =user.name + " "
     .main-contents__header__edit-btn
       %a.chat-main__header--group-edit-btn
-      edit
+        = link_to 'Edit', "edit", method: :get
   .main-contents__message
     = render partial: 'message', collection: @messages
 

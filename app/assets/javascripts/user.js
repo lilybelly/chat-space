@@ -24,9 +24,8 @@ $(function() {
     $("#chat-group-users").append(html)
   }
 
-  $(".user-search-field").on("keyup", function() {
-    var input = $(".user-search-field.chat-group-form__input").val();
-    // if (input.length !== 0){
+  $("#user-search-field").on("keyup", function() {
+    var input = $("#user-search-field").val();
       $.ajax({
         type: 'GET',
         url: ' /users',
@@ -46,7 +45,6 @@ $(function() {
       .fail(function() {
         alert('ユーザー検索に失敗しました');
       })
-    // }
 
   });
   $(document).on("click", ".chat-group-user__btn--add", function(){
